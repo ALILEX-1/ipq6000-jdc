@@ -55,6 +55,7 @@ case "$FIRMWARE" in
 	glinet,gl-axt1800|\
 	huasifei,wf-hr6001|\
 	linksys,mr7350|\
+	xiaomi,redmi-ax5-jdcloud|\
 	qihoo,v6|\
 	zn,m2)
 		ath11kcal_extract "0:ART" 4096 65536
@@ -69,6 +70,7 @@ ath11k-macs)
 	huasifei,wf-hr6001|\
 	linksys,mr7350|\
 	qihoo,v6|\
+	xiaomi,redmi-ax5-jdcloud|\
 	zn,m2)
 		ath11k_generate_macs
 		;;
