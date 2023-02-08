@@ -112,6 +112,19 @@ define Device/qihoo_v6
 endef
 TARGET_DEVICES += qihoo_v6
 
+define Device/xiaomi_redmi-ax5-jdcloud
+	$(call Device/FitImage)
+	SOC := ipq6018
+	BLOCKSIZE := 64k
+	KERNEL_SIZE := 6144k
+	DEVICE_TITLE := Xiaomi Redmi Router AX5 JDCloud
+        DEVICE_DTS := qcom-ipq6018-redmi-ax5-jdcloud
+	DEVICE_DTS_CONFIG := config@cp03-c1
+	IMAGES += factory.bin
+	IMAGE/factory.bin := append-kernel | pad-to 6144k |	append-rootfs | append-metadata
+endef
+TARGET_DEVICES += xiaomi_redmi-ax5-jdcloud
+
 define Device/xiaomi_rm1800
 	$(call Device/FitImage)
 	$(call Device/UbiFit)
